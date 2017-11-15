@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from accounts.views import get_index, logout, login, register
+from userContacts.views import add_contact
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,4 +24,5 @@ urlpatterns = [
     url(r'^logout$', logout),
     url(r'^login$', login),
     url(r'^register$', register),
+    url(r'^addcontact$', add_contact)
 ]
